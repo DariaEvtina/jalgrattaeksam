@@ -18,16 +18,24 @@ if(!empty($_REQUEST["eesnimi"]) && !empty(($_REQUEST["perekonnanimi"]))){
 <html>
 <head>
     <title>Kasutaja registreerimine</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<h1>Registreerimine</h1>
 <?php include("navigation.php");
 ?>
+<div class="header"><h1>Registreerimine</h1></div>
 <?php
 if(isSet($_REQUEST["lisatudeesnimi"])){
     echo "Lisati $_REQUEST[lisatudeesnimi]";
-}
 ?>
+    <br> <a href="lubadeleht.php">Vaata Lõpetamine</a>
+<?php }
+?>
+
 <form action="?">
     <dl>
         <dt>Eesnimi:</dt>
@@ -37,7 +45,10 @@ if(isSet($_REQUEST["lisatudeesnimi"])){
         <dt><input type="submit" name="sisestusnupp" value="sisesta" /></dt>
     </dl>
 </form>
+
 </body>
+<?php include("footer.php");
+?>
 </html>
 
 
