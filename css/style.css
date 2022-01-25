@@ -7,7 +7,13 @@ body {
     padding: 10px;
     background: #f1f1f1;
 }
-
+p#text{
+    color: #ffffff;
+}
+p{
+    color: #19222f;
+    text-align: center;
+}
 /* Header/Blog Title */
 .header {
     padding: 20px;
